@@ -37,11 +37,11 @@ namespace Domain_Drive_Desing.Concrete.ControlProcedure
         /// <summary>
         /// Lista de fases de tiempo indefinido que contiene.
         /// </summary>
-        public List<Phase> PhasesIndefinite { get; set; }
+        public List<PhaseIndefiniteTime> PhasesIndefinite { get => Phase.OfType<PhaseIndefiniteTime>().ToList();}
         /// <summary>
         /// Lista de fases de tiempo definido que contiene.
         /// </summary>
-        public List<Phase> PhaseDefinite { get; set; }
+        public List<PhaseDefiniteTime> PhaseDefinite { get => Phase.OfType<PhaseDefiniteTime>().ToList();}
         #endregion
     }
 
@@ -51,7 +51,7 @@ namespace Domain_Drive_Desing.Concrete.ControlProcedure
     /// <remarks>
     /// Hereda de <see cref="Operation"/>
     /// </remarks>
-    public class OperationDefineTime : Operation
+    public class OperationDefiniteTime : Operation
     {
 
     }

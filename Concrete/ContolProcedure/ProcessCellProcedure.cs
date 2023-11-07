@@ -38,11 +38,11 @@ namespace Domain_Drive_Desing.Concrete.ControlProcedure
         /// <summary>
         /// Lista de procedimientos de unidad de tiempo indefinido que contiene.
         /// </summary>
-        public List<UnitProcedure> ProceduresIndefinite { get; set; }
+        public List<UnitProcedureIndefiniteTime> ProceduresIndefinite { get => Procedures.OfType<UnitProcedureIndefiniteTime>().ToList();}
         /// <summary>
         /// Lista de procedimientos de unidad de tiempo definido que contiene.
         /// </summary>
-        public List<UnitProcedure> ProceduresDefinite { get; set; }
+        public List<UnitProcedureDefiniteTime> ProceduresDefinite { get => Procedures.OfType<UnitProcedureDefiniteTime>().ToList();}
         #endregion
     }
 

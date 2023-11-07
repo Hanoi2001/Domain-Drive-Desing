@@ -42,11 +42,11 @@ namespace Domain_Drive_Desing.Concrete.ControlProcedure
         /// <summary>
         /// Listas que contiene todas las operaciones de tiempo indefinido.
         /// </summary>
-        public List<Operation> OperationsIndefinite { get; set; }
+        public List<OperationIndefiniteTime> OperationsIndefinite { get => Operations.OfType<OperationIndefiniteTime>().ToList();}
         /// <summary>
         /// Listas que contiene todas las operaciones de tiempo definido.
         /// </summary>
-        public List<Operation> OperationsDefinite { get; set; }
+        public List<OperationDefiniteTime> OperationsDefinite { get => Operations.OfType<OperationDefiniteTime>().ToList();}
         #endregion
     }
 
